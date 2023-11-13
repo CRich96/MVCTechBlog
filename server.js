@@ -8,7 +8,6 @@ const helpers = require('./utils/helpers');
 
 //importing handlebars
 const exphbs = require('express-handlebars');
-// const hbs = exphbs.create({});
 const hbs = exphbs.create({helpers});
 //connecting session to sequelize
 const session = require('express-session');
