@@ -20,7 +20,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 //creating new session
 const sess = {
   secret: 'Super secret secret',
-  cookie: {maxAGE: 3600},
+  cookie: {maxAGE: 36000},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -42,6 +42,6 @@ app.use(routes);
 
 
 // turn on connection to db and server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
