@@ -1,18 +1,14 @@
-<button type="submit" class="btn"><a href="/dashboard/new">+ New Post</a></button>
-
-
 {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
-  <ol>
     {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+      {{> dashboard-postinfo post}}
+      {{!-- <a href="/dashboard/edit/{{post.id}}">Edit post</a> --}}
     {{/each}}
-  </ol>
+
 </section>
 {{/if}}
+
+<button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
 
 <script src="/javascript/add-post.js"></script>
