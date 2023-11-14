@@ -3,7 +3,7 @@ const { Post, User, Comment} = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 
-// GET all users
+// GET all posts
 router.get('/', (req, res) => {
     console.log('======================');
     Post.findAll({
@@ -80,7 +80,7 @@ router.get('/:id', (req, res) => {
 
 // creating a post
 router.post('/', withAuth, (req, res) => {
-    // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+    //create 1 post
     Post.create({ 
         title: req.body.title,
         content: req.body.content,

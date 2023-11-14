@@ -12,7 +12,6 @@ router.get('/', withAuth, (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
         'title',
         'content',
         'created_at'
@@ -49,8 +48,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         where: {
           id: req.params.id
         },
-        attributes: ['id', 
-                     'post_url', 
+        attributes: ['id',
                      'title',
                      'content',
                      'created_at'
@@ -87,8 +85,8 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 
 // // redirecting users to sign in page once they sign up
-// router.get('/new', (req, res) => {
-//     res.render('new-post');
-// });
+router.get('/new', (req, res) => {
+    res.render('new-post');
+});
 
 module.exports = router;

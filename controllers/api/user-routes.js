@@ -44,8 +44,6 @@ router.get('/:id', (req, res) => {
           {
             model: Post,
             attributes: ['title'],
-            // through: Vote,
-            // as: 'voted_posts'
           }
         ]
       })
@@ -67,7 +65,6 @@ router.post('/', (req, res) => {
     // expects {username: 'Lernantino', password: 'password1234'}
     User.create({
         username: req.body.username,
-        email: req.body.email,
         password: req.body.password
     })
     // store user data during session 
@@ -79,16 +76,20 @@ router.post('/', (req, res) => {
 
         res.json(dbUserData);
         });
-    });
+    }) 
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
 });
 
 
 // POST to identify users 
 router.post('/login', (req, res) => {
-    // expects {username: 'lernantino@gmail.com', password: 'password1234'}
+    // expects {username: 'CRich96', password: 'password1234'}
     User.findOne({
         where: {
-            email: req.body.email
+            email: req.body.username
         }
     }).then(dbUserData => {
         if (!dbUserData) {

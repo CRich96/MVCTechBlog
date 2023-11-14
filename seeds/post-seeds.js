@@ -8,7 +8,7 @@ const postData = [
 
   },
   {
-    title: 'Why MVC is import',
+    title: 'Why MVC is important',
     content: 'MVC allows developers to maintain true separation of concerns.',
     user_id: 2
   },
