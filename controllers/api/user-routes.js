@@ -89,7 +89,7 @@ router.post('/login', (req, res) => {
     // expects {username: 'CRich96', password: 'password1234'}
     User.findOne({
         where: {
-            email: req.body.username
+            username: req.body.username
         }
     }).then(dbUserData => {
         if (!dbUserData) {

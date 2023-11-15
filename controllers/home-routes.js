@@ -49,9 +49,9 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// redirecting users to sign in page once they sign up
+// redirecting users to sign up
 router.get('/signup', (req, res) => {
-  res.render('signup');
+  res.render('sign-up');
 });
 
 //rendering one post to the single-post page
