@@ -13,7 +13,8 @@ The Tech Blog is a blog website where developers can publish their blog posts an
 * [Contributing](#contributing)
 * [Questions](#questions)
 ## Deployed Application 
-[Walk-through Video]()
+[Tech Blog](https://guarded-refuge-85630-b1fc6daf1801.herokuapp.com/)
+![Image](./assets/Techblog.png)
 ## User Story 
 AS A developer who writes about tech<br />
 I WANT a CMS-style blog site<br />
